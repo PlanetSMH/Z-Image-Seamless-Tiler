@@ -6,7 +6,7 @@ A Python script for generating seamless, tileable textures with Z-Image using No
 
 | Z-Image 默认生成 (Original) | Seamless 优化生成 (Optimized) |
 | :---: | :---: |
-| ![Default](assets/Z-Image.png) | ![Seamless](assets/Z-Image-Seamless-Tiler.png) |
+| ![Default](assets/Z-Image-Original.png) | ![Seamless](assets/Z-Image-Seamless-Tiler.png) |
 
 ---
 
