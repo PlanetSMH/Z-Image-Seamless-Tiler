@@ -47,5 +47,6 @@ The project is under active development. Support for more models is coming soon:
 - [x] **Z-Image** (Current Support)
 - [ ] **Qwen-Image** (To Do)
 - [ ] **Flux2** (To Do)
+- [ ] **ComfyUI Custom Nodes** (Upcoming 🚀) - 计划将该算法封装为 ComfyUI 插件节点。
 
 ---
