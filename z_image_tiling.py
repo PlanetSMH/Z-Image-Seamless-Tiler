@@ -92,9 +92,10 @@ if __name__ == "__main__":
     # Example Usage
     tiler = ZImageTiler()
     img = tiler.generate(
-        prompt="texture of potatoes surface",
-        seed=336844923011399,
+        prompt="texture of damp boulders",
+        seed=270152793537204,
         steps=50
     )
     img.save("seamless_texture.png")
+
 
