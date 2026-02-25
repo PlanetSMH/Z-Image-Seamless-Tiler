@@ -90,10 +90,11 @@ class ZImageTiler:
 
 if __name__ == "__main__":
     # Example Usage
-    tiler = ZImageTiler(model_path=model_path)
+    tiler = ZImageTiler()
     img = tiler.generate(
         prompt="texture of potatoes surface",
         seed=336844923011399,
         steps=50
     )
     img.save("seamless_texture.png")
+
