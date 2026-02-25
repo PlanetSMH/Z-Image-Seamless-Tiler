@@ -36,3 +36,16 @@ Please place `z_image_tiling.py` into the following relative path inside your Di
 * **Noise Rolling**: 优化噪声分布，减少边界感。
 * **Circular VAE Padding**: 解决 VAE 解码产生的接缝问题。
 * **One-click Generation**: 简单集成，快速生成高质量无缝贴图。
+
+---
+
+## 路线图 | Roadmap
+
+目前项目正在积极开发中，未来将支持更多模型：
+The project is under active development. Support for more models is coming soon:
+
+- [x] **Z-Image** (Current Support)
+- [ ] **Qwen-Image** (To Do)
+- [ ] **Flux2** (To Do)
+
+---
