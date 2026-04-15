@@ -1,52 +1,99 @@
-# Z-Image-Seamless-Tiler
-A Python script for generating seamless, tileable textures with Z-Image using Noise Rolling and Circular VAE Padding.
+# DiT-Seamless-Tiler
 
+Seamless tiling toolkit for DiT-based image generation models: Z-image, Qwen-Image, Flux
 
-## 效果对比 | Comparison
+This repository focuses on practical methods for reducing seam artifacts in tileable textures:
 
-| Z-Image 默认生成 (Original) | Seamless 优化生成 (Optimized) |
+- Latent/Noise rolling during denoising
+- Circular VAE decoder padding
+
+### Current Status
+
+- **txt2img(Z-Image)**: Available
+- **txt2img(Flux2Klein_4B)**: Available
+- **txt2img(Qwen-Image)**: **Coming Soon**
+
+- **Flux2Klein_4B (img2img)**: **Coming Soon**
+
+### Environments
+
+- **Z-Image** scripts run in [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio).
+- **Flux** scripts run in a local environment with `diffusers + torch`.
+
+### Repository Layout
+
+```text
+.
+├── assets/
+│   ├── txt2img/
+│   │   ├── Qwen-Image/
+│   │   ├── Z-Image/
+│   │   └── Flux2Klein_4B/
+│   └── img2img/
+├── txt2img/
+│   ├── Qwen-Image/
+│   ├── Z-Image/
+│   │   └── z_image_tiling.py
+│   └── Flux2Klein_4B/
+│       └── flux_txt2img_seamless.py
+└── img2img/
+```
+
+### Usage (Flux txt2img)
+
+```bash
+python txt2img/Flux2Klein_4B/flux_txt2img_seamless.py --model-dir /path/to/Model
+```
+
+### Visual Results
+
+#### Z-Image txt2img
+
+| Original (2x2) | Seamless (2x2) |
 | :---: | :---: |
-| ![Default](assets/Z-Image-Original.png) | ![Seamless](assets/Z-Image-Seamless-Tiler.png) |
+| ![Z-Image Original](assets/txt2img/Z-Image/Z-Image-Original.png) | ![Z-Image Seamless](assets/txt2img/Z-Image/Z-Image-Seamless-Tiler.png) |
+
+#### Flux2Klein_4B txt2img
+
+| Original (2x2) | Seamless (2x2) |
+| :---: | :---: |
+| ![Flux Original](assets/txt2img/Flux2Klein_4B/Flux2Klein_4B_Original.png) | ![Flux Seamless](assets/txt2img/Flux2Klein_4B/Flux2Klein_4B_Seamless_Tiler.png) |
 
 ---
 
-## 使用说明 (Chinese)
+
+## Acknowledgements
+
+This project was initiated during my internship at Ubisoft China La Forge.
+I sincerely appreciate the team's support, guidance, and the research environment they provided.
+
+The open-source code and documentation in this repository are independently organized and maintained by me.
+You can look forward to more mature official open-source implementations and ComfyUI workflow solutions from Ubisoft China La Forge in the future.
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+### 当前进度
+
+- **Z-Image（txt2img）**：已支持
+- **Flux2Klein_4B（txt2img）**：已支持
+- **Flux2Klein_4B（img2img）**：准备发布
+- **Qwen-Image（txt2img / img2img）**：**即将上线**
 
 ### 环境要求
-本脚本需要在 [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) 环境下运行。
 
-### 安装与位置
-请将 `z_image_tiling.py` 放置在 DiffSynth-Studio 项目的以下相对路径中：
-`./examples/z_image/model_inference/`
+- **Z-Image** 脚本运行在 [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) 环境。
+- **Flux** 脚本运行在本地 `diffusers + torch` 环境。
 
----
+### Z-Image 使用方式（保持原有方式）
 
-## Usage Guide (English)
+请将 `txt2img/Z-Image/z_image_tiling.py` 放到 DiffSynth-Studio 项目的对应推理目录中运行（与原项目使用方式一致）。
 
-### Requirements
-This script is designed to work within the [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) environment.
+## 致谢
 
-### Installation & Placement
-Please place `z_image_tiling.py` into the following relative path inside your DiffSynth-Studio directory:
-`./examples/z_image/model_inference/`
+本项目起始于我在育碧中国 La Forge 实习期间的相关任务探索。
+感谢团队提供的研究环境、指导与支持。
 
----
-
-## 主要特性 | Features
-* **Noise Rolling**: 优化噪声分布，减少边界感。
-* **Circular VAE Padding**: 解决 VAE 解码产生的接缝问题。
-* **One-click Generation**: 简单集成，快速生成高质量无缝贴图。
-
----
-
-## 路线图 | Roadmap
-
-目前项目正在积极开发中，未来将支持更多模型：
-The project is under active development. Support for more models is coming soon:
-
-- [x] **Z-Image** (Current Support)
-- [ ] **Qwen-Image** (To Do)
-- [ ] **Flux2** (To Do)
-- [ ] **ComfyUI Custom Nodes** (Upcoming 🚀) - 计划将该算法封装为 ComfyUI 插件节点。
-
----
+本仓库中的开源代码与文档由我独立整理与维护。
+后续可期待育碧中国 La Forge 官方发布更成熟的开源项目实现及 ComfyUI 工作流方案。
