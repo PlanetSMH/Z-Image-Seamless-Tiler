@@ -13,7 +13,7 @@ This repository focuses on practical methods for reducing seam artifacts in tile
 - **txt2img(Flux2Klein_4B)**: Available
 - **txt2img(Qwen-Image)**: **Coming Soon**
 
-- **Flux2Klein_4B (img2img)**: **Coming Soon**
+- **img2img**: **Coming Soon**
 
 ### Environments
 
@@ -76,10 +76,12 @@ You can look forward to more mature official open-source implementations and Com
 
 ### 当前进度
 
-- **Z-Image（txt2img）**：已支持
-- **Flux2Klein_4B（txt2img）**：已支持
-- **Flux2Klein_4B（img2img）**：准备发布
-- **Qwen-Image（txt2img / img2img）**：**即将上线**
+
+- **txt2img(Z-Image)**: 已支持
+- **txt2img(Flux2Klein_4B)**: 已支持
+- **txt2img(Qwen-Image)**: **即将上线**
+
+- **img2img**: **即将上线**
 
 ### 环境要求
 
